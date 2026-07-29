@@ -58,20 +58,53 @@ This demonstrates the sign convention and the price-lock calculation:
 
 ### Current Question
 
-The next step is to contrast the symmetric price lock from a long forward with the asymmetric protection from a call option. Use an airline example with a $2.50 strike and a $0.10-per-gallon option premium, examining maturity prices of $3.00 and $2.00 per gallon.
+The course contrasted the symmetric price lock from a long forward with the asymmetric protection from a call option. The example uses 1 million gallons, a $2.50 strike, and a $0.10-per-gallon option premium.
+
+The learner's responses subtracted the $100,000 premium from the effective cost. This revealed a sign issue: because the airline is buying the call, the premium is a cost and must be added to positive cost figures. The correct calculations are:
+
+- At `S_T = $3.00`, physical cost is $3 million, option payoff is $500,000, premium is $100,000, and total effective cost is $2.6 million.
+- At `S_T = $2.00`, physical cost is $2 million, option payoff is zero, premium is $100,000, and total effective cost is $2.1 million.
+
+Clarified terminology:
+
+- **Option payoff** excludes the premium: `max(S_T - K, 0)`.
+- **Net option P&L** includes the premium: `max(S_T - K, 0) - c`, ignoring the premium's time value.
+- For the two scenarios, the option payoffs are $500,000 and zero, while net option P&L is +$400,000 and -$100,000.
+
+The call hedge's all-in unit cost is `min(S_T, K) + c`. With `K = $2.50` and `c = $0.10`, it is cheaper than the $2.50 forward hedge when `S_T < $2.40`, equal at $2.40, and more expensive above $2.40.
+
+Introduced Hull's three participant roles:
+
+- a **hedger** uses derivatives to reduce an exposure arising elsewhere;
+- a **speculator** uses derivatives to create or increase exposure; and
+- an **arbitrageur** combines positions to exploit inconsistent prices without net risk in the idealized model.
+
+Emphasized that the participant's overall economic position—not the derivative in isolation—determines the classification.
+
+For an oil producer expecting to sell 100,000 barrels in six months at a forward price of $75, the learner correctly identified a **short forward** and classified the producer as a **hedger**. At `S_T = $60`, the learner correctly gave the payoff as `(75 - 60) × 100,000 = $1.5 million`. Combined with $6 million of physical sales revenue, this locks total revenue at $7.5 million.
+
+The next topic is the institutional distinction between OTC forwards and exchange-traded futures, followed by the basis risk that arises when an energy firm's physical exposure does not exactly match a listed contract.
 
 ## Confirmed Mastery
 
 - A future commodity buyer hedges rising prices with a long forward position.
 - A long forward's maturity payoff is `Q × (S_T - K)`.
 - Combining the physical purchase with the long forward locks the effective purchase price at `K`, ignoring basis risk and other frictions.
+- A future commodity seller hedges falling prices with a short forward position.
+- A short forward's maturity payoff is `Q × (K - S_T)`.
+- Hedger, speculator, and arbitrageur are classifications of the participant's overall position, not labels inherent to a particular contract.
+
+Needs reinforcement:
+
+- An option buyer pays the premium. When expressing outcomes as positive costs, add the premium; when expressing signed cash flows, the premium is negative.
+- Keep **payoff** distinct from net **profit/P&L**.
 
 ## Likely Next Steps
 
-1. Contrast forwards with call options using the airline example.
-2. Show how a call caps the effective fuel price while preserving the benefit of falling prices.
-3. Discuss the option premium as the price of retaining that favorable-price exposure.
-4. Introduce hedgers, speculators, and arbitrageurs from Hull Chapter 1.
+1. Compare OTC forwards with exchange-traded futures.
+2. Explain standardization, clearing, margin, daily settlement, liquidity, and counterparty risk.
+3. Introduce basis risk and cross-hedging in energy markets.
+4. Reinforce the premium's sign and the distinction between payoff and net P&L.
 
 ## Repository State
 

@@ -93,7 +93,32 @@ Introduced the standard notation `b_t = S_t - F_t` and showed that a future buye
 
 Using `S_0 = $2.40`, `F_0 = $2.30`, `S_T = $2.80`, and `F_T = $2.60`, the learner correctly calculated `b_0 = $0.10`, `b_T = $0.20`, and a $0.10 increase in the basis. The effective hedged price is therefore `$2.30 + $0.20 = $2.50`; if the basis had remained at $0.10, it would have been $2.40.
 
-The next topic is daily settlement and margin on futures. Use a producer short 100,000 barrels at $75 whose futures price rises to $80 the next day. Ask for the variation-margin cash flow and contrast this immediate futures loss with the increased value of the producer's physical oil.
+Introduced daily settlement and futures margin:
+
+- **initial margin** is collateral posted when opening a futures position, not an option premium;
+- **variation margin** transfers each day's futures gain or loss in cash; and
+- **maintenance margin** is the balance threshold below which a margin call occurs.
+
+For a producer short futures on 100,000 barrels at $75 when the next day's futures price is $80, the learner correctly calculated the $500,000 variation-margin amount. Clarify that it is a **cash outflow** for the short position. When asked why the overall hedge may remain economically sound, the learner observed that the price could instead have fallen to $70. This recognizes the hedge's two-sided behavior, but the current-scenario explanation needs reinforcement: when futures rise to $80, the $500,000 futures loss is offset economically by an approximately $500,000 increase in the value of the producer's physical oil, assuming a one-to-one hedge and no basis change.
+
+The next checkpoint distinguished economic hedging from liquidity. If the producer has only $200,000 of available cash but must pay $500,000 of variation margin before selling the physical oil, the learner correctly calculated a $300,000 funding shortfall but said the term **economically hedged** had not been defined.
+
+Define it explicitly before reuse: in this course, a position is economically hedged against a price move when the change in value of the derivative approximately offsets the change in value of the underlying physical exposure:
+
+`ΔV_physical + ΔV_derivative ≈ 0`.
+
+In the example, the physical oil gains approximately $500,000 while the short futures loses $500,000, so the producer remains economically hedged against the price move. Nevertheless, it lacks $300,000 of cash needed for the immediate margin payment. This is liquidity or funding risk, distinct from residual price risk.
+
+When asked to classify the risk threatening the producer, the learner answered **basis risk**. Correct this distinction:
+
+- **Basis risk** occurs when the physical exposure and hedge do not offset because their prices move differently.
+- **Liquidity/funding risk** occurs when offsetting values are present but required cash payments arrive before the offsetting gains become cash.
+
+In the producer example, the physical gain and futures loss are both $500,000, so there is no basis mismatch under the simplifying assumptions. The $300,000 inability to meet the margin call is liquidity/funding risk. Reassess this distinction before marking it mastered.
+
+After this correction, the learner reported that they understood the distinction. Treat it as provisionally understood and use a later scenario to check retention rather than repeating the same question immediately.
+
+The next topic is the clearinghouse: explain how it becomes the buyer to every seller and the seller to every buyer, then connect margin and daily settlement to reduced counterparty credit exposure.
 
 ## Confirmed Mastery
 
@@ -106,18 +131,23 @@ The next topic is daily settlement and margin on futures. Use a producer short 1
 - When a physical price rises by $0.40 but a related long futures hedge gains only $0.30, the remaining $0.10 is an imperfect-hedge exposure caused by price mismatch.
 - Basis is `b_t = S_t - F_t`; a change in basis produces hedge error when the physical exposure and futures contract do not move together perfectly.
 - A future buyer's effective price after a long futures hedge is `F_0 + b_T`.
+- A short futures position loses cash when the futures price rises; a move from $75 to $80 on 100,000 barrels produces a $500,000 variation-margin outflow.
+- A $500,000 margin call against only $200,000 of available cash creates a $300,000 funding shortfall.
 
 Needs reinforcement:
 
 - An option buyer pays the premium. When expressing outcomes as positive costs, add the premium; when expressing signed cash flows, the premium is negative.
 - Keep **payoff** distinct from net **profit/P&L**.
 - Continue distinguishing an expected economic hedge outcome from the timing of its cash flows.
+- Reinforce that a futures loss can be offset by a gain in the physical exposure even when the futures margin cash must be paid before the physical gain is monetized.
+- Define new finance terminology before using it in assessment questions.
+- Reassess basis risk versus liquidity/funding risk later; the learner initially misclassified the margin-timing problem, then reported understanding after correction.
 
 ## Likely Next Steps
 
-1. Explain daily marking-to-market, initial margin, variation margin, and maintenance margin.
-2. Show how a sound economic hedge can still create short-term funding pressure.
-3. Rebuild the comparison between a customized forward and standardized futures.
+1. Explain the clearinghouse and how margin reduces counterparty credit exposure.
+2. Rebuild the comparison between a customized forward and standardized futures.
+3. Reassess basis risk versus liquidity/funding risk later using a fresh scenario.
 4. Reinforce the premium's sign and the distinction between payoff and net P&L.
 
 ## Repository State

@@ -85,6 +85,16 @@ For an oil producer expecting to sell 100,000 barrels in six months at a forward
 
 The next topic is the institutional distinction between OTC forwards and exchange-traded futures, followed by the basis risk that arises when an energy firm's physical exposure does not exactly match a listed contract.
 
+The initial abstract comparison did not land; the learner said they did not understand the checkpoint. The topic was re-taught using a numerical example in which the airline's jet-fuel price rises by $0.40 while a related futures price rises by only $0.30. The learner correctly identified that $0.10 per gallon remains unhedged. This establishes the concrete intuition behind **basis risk**.
+
+Introduced the standard notation `b_t = S_t - F_t` and showed that a future buyer's effective price after a long futures hedge is:
+
+`S_T - (F_T - F_0) = F_0 + b_T`.
+
+Using `S_0 = $2.40`, `F_0 = $2.30`, `S_T = $2.80`, and `F_T = $2.60`, the learner correctly calculated `b_0 = $0.10`, `b_T = $0.20`, and a $0.10 increase in the basis. The effective hedged price is therefore `$2.30 + $0.20 = $2.50`; if the basis had remained at $0.10, it would have been $2.40.
+
+The next topic is daily settlement and margin on futures. Use a producer short 100,000 barrels at $75 whose futures price rises to $80 the next day. Ask for the variation-margin cash flow and contrast this immediate futures loss with the increased value of the producer's physical oil.
+
 ## Confirmed Mastery
 
 - A future commodity buyer hedges rising prices with a long forward position.
@@ -93,17 +103,21 @@ The next topic is the institutional distinction between OTC forwards and exchang
 - A future commodity seller hedges falling prices with a short forward position.
 - A short forward's maturity payoff is `Q × (K - S_T)`.
 - Hedger, speculator, and arbitrageur are classifications of the participant's overall position, not labels inherent to a particular contract.
+- When a physical price rises by $0.40 but a related long futures hedge gains only $0.30, the remaining $0.10 is an imperfect-hedge exposure caused by price mismatch.
+- Basis is `b_t = S_t - F_t`; a change in basis produces hedge error when the physical exposure and futures contract do not move together perfectly.
+- A future buyer's effective price after a long futures hedge is `F_0 + b_T`.
 
 Needs reinforcement:
 
 - An option buyer pays the premium. When expressing outcomes as positive costs, add the premium; when expressing signed cash flows, the premium is negative.
 - Keep **payoff** distinct from net **profit/P&L**.
+- Continue distinguishing an expected economic hedge outcome from the timing of its cash flows.
 
 ## Likely Next Steps
 
-1. Compare OTC forwards with exchange-traded futures.
-2. Explain standardization, clearing, margin, daily settlement, liquidity, and counterparty risk.
-3. Introduce basis risk and cross-hedging in energy markets.
+1. Explain daily marking-to-market, initial margin, variation margin, and maintenance margin.
+2. Show how a sound economic hedge can still create short-term funding pressure.
+3. Rebuild the comparison between a customized forward and standardized futures.
 4. Reinforce the premium's sign and the distinction between payoff and net P&L.
 
 ## Repository State

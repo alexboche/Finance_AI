@@ -42,23 +42,35 @@ Introduced:
 - An option gives its buyer a right without requiring exercise, in exchange for an upfront premium.
 - The initial energy example is an airline that must buy 1 million gallons of jet fuel in three months and wants protection against rising fuel prices.
 
-### Unresolved Question
+### Checkpoint Response
 
-The learner has not yet answered:
+The learner correctly answered that the airline should take a **long forward position**: the airline's operating exposure loses value when jet fuel prices rise, while a long forward gains value when the underlying price rises.
 
-> Should the airline take a long or short forward position in jet fuel to hedge its future purchase, and what happens to the hedge if jet fuel prices rise?
+For 1 million gallons with a forward price of $2.50 per gallon and a maturity market price of $3.00, the learner also correctly calculated:
 
-Do not record this concept as mastered until the learner answers and the reasoning has been discussed.
+- unhedged physical purchase cost: $3 million;
+- long-forward payoff: +$500,000; and
+- net hedged cost: $2.5 million.
+
+This demonstrates the sign convention and the price-lock calculation:
+
+`physical cost - forward payoff = Q × S_T - Q × (S_T - K) = Q × K`.
+
+### Current Question
+
+The next step is to contrast the symmetric price lock from a long forward with the asymmetric protection from a call option. Use an airline example with a $2.50 strike and a $0.10-per-gallon option premium, examining maturity prices of $3.00 and $2.00 per gallon.
 
 ## Confirmed Mastery
 
-No concepts have yet been assessed as mastered.
+- A future commodity buyer hedges rising prices with a long forward position.
+- A long forward's maturity payoff is `Q × (S_T - K)`.
+- Combining the physical purchase with the long forward locks the effective purchase price at `K`, ignoring basis risk and other frictions.
 
 ## Likely Next Steps
 
-1. Discuss the airline hedge and establish the sign convention for long and short forward positions.
-2. Write the physical exposure and derivative payoff separately, then combine them to show how the hedge stabilizes the effective purchase price.
-3. Contrast forwards with options using the same airline example.
+1. Contrast forwards with call options using the airline example.
+2. Show how a call caps the effective fuel price while preserving the benefit of falling prices.
+3. Discuss the option premium as the price of retaining that favorable-price exposure.
 4. Introduce hedgers, speculators, and arbitrageurs from Hull Chapter 1.
 
 ## Repository State

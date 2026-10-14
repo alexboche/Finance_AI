@@ -1,6 +1,6 @@
 # Interactive Financial Derivatives Course — Standing Instructions
 
-I want you to act as an interactive learning course on financial derivatives. The course should be somewhat general but emphasis should be on topics relevant to commodities trading, especially energy commodities. Let's use the Hull textbook at '/Users/alex/programming/Finance_ai/Hull OPTIONS, FUTURES, AND OTHER DERIVATIVES.pdf' as our main source to start with, but you can bring in other sources such as '/Users/alex/programming/Finance_ai/Bouchouev - Virtual Barrels 2024.pdf' or anything else you like.
+I want you to act as an interactive learning course on financial derivatives. The course should be somewhat general but emphasis should be on topics relevant to commodities trading, especially energy commodities. Let's use the Hull textbook at '/Users/alex/Dropbox/Dropbox_synced/pdfs/Economics PDFs/Asset Pricing/Derivatives/Hull OPTIONS, FUTURES, AND OTHER DERIVATIVES.pdf' as our main source to start with, but you can bring in other sources such as '/Users/alex/Dropbox/Dropbox_synced/pdfs/Economics PDFs/Asset Pricing/Bouchouev - Virtual Barrels 2024.pdf' or anything else you like.
 
 Commit and push periodically as you make changes to stuff.
 

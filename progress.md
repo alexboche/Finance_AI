@@ -1,6 +1,6 @@
 # Financial Derivatives Course — Progress and Continuity Log
 
-Last updated: 2026-07-28
+Last updated: 2026-10-14
 
 ## How to Resume
 
@@ -23,11 +23,11 @@ Develop a rigorous, practical understanding of financial derivatives, with broad
 
 ## Primary Sources
 
-- John C. Hull, *Options, Futures, and Other Derivatives*, Eighth Global Edition (2012), located at `/Users/alex/programming/Finance_ai/Hull OPTIONS, FUTURES, AND OTHER DERIVATIVES.pdf`.
-- Ilia Bouchouev, *Virtual Barrels* (2024), located at `/Users/alex/programming/Finance_ai/Bouchouev - Virtual Barrels 2024.pdf`.
+- John C. Hull, *Options, Futures, and Other Derivatives*, Eighth Global Edition (2012), located at `/Users/alex/Dropbox/Dropbox_synced/pdfs/Economics PDFs/Asset Pricing/Derivatives/Hull OPTIONS, FUTURES, AND OTHER DERIVATIVES.pdf`.
+- Ilia Bouchouev, *Virtual Barrels* (2024), located at `/Users/alex/Dropbox/Dropbox_synced/pdfs/Economics PDFs/Asset Pricing/Bouchouev - Virtual Barrels 2024.pdf`.
 - Hull is the main source for foundational theory. Bouchouev and other high-quality sources should provide commodity and energy-market context.
 
-The two PDFs are local reference materials and are intentionally excluded from Git tracking.
+The two PDFs are stored in Dropbox rather than this repository. The workspace copies have been removed to avoid duplicate storage, and the filenames remain excluded from Git tracking to prevent accidental reintroduction.
 
 ## Current Position
 
